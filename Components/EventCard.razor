@@ -1,0 +1,32 @@
+@using EventEaseApp.Models
+
+<div class="event-card">
+    @if (EventData is not null)
+    {
+        <h3>@(string.IsNullOrWhiteSpace(EventData.Name) ? "Unnamed Event" : EventData.Name)</h3>
+        <p><strong>Date:</strong> @(EventData.Date == default ? "TBD" : EventData.Date.ToString("MMMM dd, yyyy"))</p>
+        <p><strong>Location:</strong> @(string.IsNullOrWhiteSpace(EventData.Location) ? "Location TBD" : EventData.Location)</p>
+
+        <div class="event-actions">
+            <!-- View Details button -->
+            <NavLink class="btn btn-primary me-2"
+                     href=@($"/eventdetails/{Uri.EscapeDataString(EventData.Name ?? "unknown")}")>
+                View Details
+            </NavLink>
+
+            <!-- Register button -->
+            <NavLink class="btn btn-success"
+                     href=@($"/register/{Uri.EscapeDataString(EventData.Name ?? "unknown")}")>
+                Register
+            </NavLink>
+        </div>
+    }
+    else
+    {
+        <p>Event data is not available.</p>
+    }
+</div>
+
+@code {
+    [Parameter] public Event? EventData { get; set; }
+}

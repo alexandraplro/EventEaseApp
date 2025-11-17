@@ -1,0 +1,23 @@
+@page "/registrations"
+@using EventEaseApp.Models
+@using EventEaseApp.Services
+
+<h2>All Registrations</h2>
+
+@if (RegistrationService.GetRegistrations().Count == 0)
+{
+    <p>No registrations yet.</p>
+}
+else
+{
+    @foreach (var group in RegistrationService.GetRegistrations().GroupBy(r => r.EventName))
+    {
+        <h3>@group.Key</h3>
+        <ul>
+            @foreach (var reg in group)
+            {
+                <li>@reg.Name (@reg.Email)</li>
+            }
+        </ul>
+    }
+}

@@ -1,0 +1,54 @@
+@page "/register/{eventName}"
+@using EventEaseApp.Models
+@using EventEaseApp.Services
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Forms
+
+<h2>Register for @eventName</h2>
+
+<EditForm Model="registration" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label class="form-label">Name:</label>
+        <InputText class="form-control" @bind-Value="registration.Name" />
+        <ValidationMessage For="@(() => registration.Name)" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email:</label>
+        <InputText class="form-control" @bind-Value="registration.Email" />
+        <ValidationMessage For="@(() => registration.Email)" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Register</button>
+</EditForm>
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div class="alert alert-success mt-3">@successMessage</div>
+    <NavLink class="btn btn-link" href="/registrations">View all registrations</NavLink>
+}
+
+@code {
+    [Parameter] public string? eventName { get; set; }
+
+    private Registration registration = new();
+    private string? successMessage;
+
+    private void HandleValidSubmit()
+    {
+        // Assign the event name from the route parameter
+        registration.EventName = eventName;
+
+        // Save registration via your service
+        RegistrationService.AddRegistration(registration);
+
+        // Show confirmation
+        successMessage = $"Thank you for registering for {eventName}!";
+
+        // Reset form
+        registration = new();
+    }
+}
