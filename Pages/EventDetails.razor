@@ -1,20 +1,29 @@
 @page "/eventdetails/{eventName}"
 @using EventEaseApp.Models
 @using EventEaseApp.Services
+@inject EventService EventService
 
 <h2>Event Details</h2>
 
-@if (selectedEvent != null)
+@if (selectedEvent is not null)
 {
     <p><strong>Name:</strong> @selectedEvent.Name</p>
     <p><strong>Date:</strong> @selectedEvent.Date.ToString("MMMM dd, yyyy")</p>
     <p><strong>Location:</strong> @selectedEvent.Location</p>
 
-    <a href="/register/@Uri.EscapeDataString(selectedEvent.Name)">Register for this event</a>
+    @if (!string.IsNullOrWhiteSpace(selectedEvent.Description))
+    {
+        <p><strong>Description:</strong> @selectedEvent.Description</p>
+    }
+
+    <NavLink class="btn rounded-pill shadow-sm"
+             href="@($"/registerevent/{Uri.EscapeDataString(selectedEvent.Name)}")">
+        Register for this event
+    </NavLink>
 }
 else
 {
-    <p>Event not found. <NavLink href="/index">Back to Events</NavLink></p>
+    <p>Event not found. <NavLink href="/">Back to Events</NavLink></p>
 }
 
 @code {
@@ -23,13 +32,10 @@ else
 
     protected override void OnParametersSet()
     {
-        var events = new List<Event>
+        if (EventService is not null && !string.IsNullOrEmpty(eventName))
         {
-            new Event { Name = "Tech Summit 2025", Date = new DateTime(2025, 12, 5), Location = "Washington, DC" },
-            new Event { Name = "Global Dev Conference", Date = new DateTime(2026, 1, 20), Location = "New York, NY" },
-            new Event { Name = "AI & Ethics Forum", Date = new DateTime(2026, 3, 15), Location = "Boston, MA" }
-        };
-
-        selectedEvent = events.FirstOrDefault(e => e.Name == eventName);
+            selectedEvent = EventService.GetEvents()
+                .FirstOrDefault(e => e.Name.Equals(eventName, StringComparison.OrdinalIgnoreCase));
+        }
     }
 }

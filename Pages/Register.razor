@@ -1,46 +1,51 @@
 @page "/register"
 @using EventEaseApp.Models
 @using EventEaseApp.Services
-@using Microsoft.AspNetCore.Components.Forms
+@inject RegistrationService RegistrationService
+@inject EventService EventService
+@inject SessionService SessionService
 
-<h2>Register for an Event</h2>
+<div class="container text-center">
+    <h2 class="mb-4">📝 Register for an Event</h2>
 
-<EditForm Model="registration" OnValidSubmit="HandleValidSubmit">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
+    <EditForm Model="registration" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
 
-    <div class="mb-3">
-        <label class="form-label">Event:</label>
-        <InputSelect class="form-select" @bind-Value="registration.EventName">
-            <option value="">-- Select an Event --</option>
-            @foreach (var ev in EventService.GetEvents())
-            {
-                <option value="@ev.Name">@ev.Name</option>
-            }
-        </InputSelect>
-        <ValidationMessage For="@(() => registration.EventName)" />
-    </div>
+        <div class="mb-3 text-start">
+            <label class="form-label">Name</label>
+            <InputText class="form-control" @bind-Value="registration.Name" />
+            <ValidationMessage For="@(() => registration.Name)" />
+        </div>
 
-    <div class="mb-3">
-        <label class="form-label">Name:</label>
-        <InputText class="form-control" @bind-Value="registration.Name" />
-        <ValidationMessage For="@(() => registration.Name)" />
-    </div>
+        <div class="mb-3 text-start">
+            <label class="form-label">Email</label>
+            <InputText class="form-control" @bind-Value="registration.Email" />
+            <ValidationMessage For="@(() => registration.Email)" />
+        </div>
 
-    <div class="mb-3">
-        <label class="form-label">Email:</label>
-        <InputText class="form-control" @bind-Value="registration.Email" />
-        <ValidationMessage For="@(() => registration.Email)" />
-    </div>
+        <div class="mb-3 text-start">
+            <label class="form-label">Event</label>
+            <InputSelect class="form-control" @bind-Value="registration.EventName">
+                <option value="">-- Select Event --</option>
+                @foreach (var ev in EventService.GetEvents())
+                {
+                    <option value="@ev.Name">@ev.Name</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => registration.EventName)" />
+        </div>
 
-    <button type="submit" class="btn btn-success">Register</button>
-</EditForm>
+        <button type="submit" class="btn btn-success rounded-pill shadow-sm">
+            Register
+        </button>
+    </EditForm>
 
-@if (!string.IsNullOrEmpty(successMessage))
-{
-    <div class="alert alert-success mt-3">@successMessage</div>
-    <NavLink class="btn btn-link" href="/registrations">View all registrations</NavLink>
-}
+    @if (successMessage != null)
+    {
+        <div class="alert alert-success mt-3">@successMessage</div>
+    }
+</div>
 
 @code {
     private Registration registration = new();
@@ -49,7 +54,13 @@
     private void HandleValidSubmit()
     {
         RegistrationService.AddRegistration(registration);
-        successMessage = $"Thank you for registering for {registration.EventName}!";
-        registration = new();
+
+        // Store session info
+        SessionService.CurrentUserName = registration.Name;
+        SessionService.CurrentUserEmail = registration.Email;
+        SessionService.UserRegistrations.Add(registration);
+
+        successMessage = $"✅ {registration.Name} registered for {registration.EventName}!";
+        registration = new Registration(); // reset form
     }
 }

@@ -199,8 +199,8 @@
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/icudt_CJK.tjcz0u77k5.dat
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/icudt_EFIGS.tptq2av103.dat
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/icudt_no_CJK.lfu7j35m59.dat
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/EventEaseApp.9wwrywciaa.wasm
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/EventEaseApp.aooqmr3hc1.pdb
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/EventEaseApp.nwy5j8krex.wasm
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/EventEaseApp.h0inb46sfv.pdb
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/blazor.boot.json
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/blazor.webassembly.js.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.50odlujk1g.wasm.gz
@@ -403,8 +403,8 @@
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/icudt_CJK.tjcz0u77k5.dat.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/icudt_EFIGS.tptq2av103.dat.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/icudt_no_CJK.lfu7j35m59.dat.gz
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/EventEaseApp.9wwrywciaa.wasm.gz
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/EventEaseApp.aooqmr3hc1.pdb.gz
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/EventEaseApp.nwy5j8krex.wasm.gz
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/EventEaseApp.h0inb46sfv.pdb.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/wwwroot/_framework/blazor.boot.json.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/EventEaseApp.staticwebassets.runtime.json
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/bin/Debug/net9.0/EventEaseApp.staticwebassets.endpoints.json
@@ -617,6 +617,7 @@
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/EventEaseApp.AssemblyInfo.cs
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/EventEaseApp.csproj.CoreCompileInputs.cache
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/EventEaseApp.MvcApplicationPartsAssemblyInfo.cache
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/EventEaseApp.sourcelink.json
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/webcil/Microsoft.AspNetCore.Authorization.wasm
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/webcil/Microsoft.AspNetCore.Components.wasm
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/webcil/Microsoft.AspNetCore.Components.Forms.wasm
@@ -818,8 +819,8 @@
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/scopedcss/projectbundle/EventEaseApp.bundle.scp.css
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/blazor.build.boot-extension.json
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/blazor.boot.json
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/eotnszvkb1-9hamtcocm6.gz
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/413vp4cml5-bepv1uslm3.gz
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/eotnszvkb1-tdjzv4d9zf.gz
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/413vp4cml5-npjqi2qbkz.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/th6pzune3g-bqjiyaj88i.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/2l52lnvn0l-c2jlpeoesf.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/2xhm8ivb61-erw9l3u2r3.gz
@@ -866,8 +867,8 @@
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/wf0qqo7io7-6j57p0kc48.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/8iag10h7wd-iag0ou56lh.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/xoybhptbjf-md9yvkcqlf.gz
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/k3y56lnnp9-bkrg2kmuwc.gz
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/k74yjbn19e-bkrg2kmuwc.gz
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/k3y56lnnp9-m5apnu635t.gz
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/k74yjbn19e-m5apnu635t.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/vdqpbjpaan-50odlujk1g.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/ney4h9k93b-nxuc56wpt2.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/o0a0dywvzr-ebm2eah9ku.gz
@@ -1068,9 +1069,9 @@
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/r489smiiq7-tjcz0u77k5.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/qvouh2q4mf-tptq2av103.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/hcxylcfklo-lfu7j35m59.gz
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/skwk8s9ui1-9wwrywciaa.gz
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/c1jhhq4o6d-aooqmr3hc1.gz
-/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/a1w0b3e4ey-39grl8b0c0.gz
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/skwk8s9ui1-nwy5j8krex.gz
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/c1jhhq4o6d-h0inb46sfv.gz
+/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/compressed/a1w0b3e4ey-fprwhrcy5g.gz
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/staticwebassets.build.json
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/staticwebassets.build.json.cache
 /Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/obj/Debug/net9.0/staticwebassets.development.json

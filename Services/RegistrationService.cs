@@ -1,19 +1,25 @@
 using EventEaseApp.Models;
+using System.Collections.Generic;
 
 namespace EventEaseApp.Services
 {
-    public static class RegistrationService
+    public class RegistrationService
     {
-        private static readonly List<Registration> registrations = new();
+        private readonly List<Registration> registrations = new();
 
-        public static void AddRegistration(Registration reg)
+        // Expose registrations as read-only to prevent accidental modification outside the service
+        public IReadOnlyList<Registration> Registrations => registrations;
+
+        // Add a new registration
+        public void AddRegistration(Registration reg)
         {
             registrations.Add(reg);
         }
 
-        public static List<Registration> GetRegistrations()
+        // Optional: clear all registrations (useful for testing or reset)
+        public void ClearRegistrations()
         {
-            return registrations;
+            registrations.Clear();
         }
     }
 }

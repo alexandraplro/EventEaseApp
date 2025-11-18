@@ -1,12 +1,10 @@
-@page "/registrations"
+@page "/attendance"
 @using EventEaseApp.Models
 @using EventEaseApp.Services
 @inject RegistrationService RegistrationService
-@inject SessionService SessionService
-
 
 <div class="container text-center">
-    <h2 class="mb-4">📋 All Registrations</h2>
+    <h2 class="mb-4">📋 Attendance Tracker</h2>
 
     @if (!RegistrationService.Registrations.Any())
     {
@@ -17,15 +15,21 @@
         @foreach (var group in RegistrationService.Registrations.GroupBy(r => r.EventName))
         {
             <div class="card mb-4 shadow-sm">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-success text-white">
                     <h5 class="mb-0">@group.Key</h5>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         @foreach (var reg in group)
                         {
-                            <li class="list-group-item">
-                                <strong>@reg.Name</strong> <span class="text-muted">(@reg.Email)</span>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>@reg.Name</strong> <span class="text-muted">(@reg.Email)</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" @bind="reg.Attended" class="form-check-input me-2" />
+                                    <label class="form-check-label">Attended</label>
+                                </div>
                             </li>
                         }
                     </ul>

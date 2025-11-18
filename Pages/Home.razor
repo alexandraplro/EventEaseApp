@@ -1,7 +1,37 @@
 ﻿@page "/"
+@using EventEaseApp.Models
+@using EventEaseApp.Services
+@inject EventService EventService
+@inject SessionService SessionService
 
-<PageTitle>Home</PageTitle>
+<div class="container text-center">
+    @if (!string.IsNullOrEmpty(SessionService.CurrentUserName))
+    {
+        <h1 class="mb-4">Welcome, @SessionService.CurrentUserName!</h1>
+    }
 
-<h1>Hello, world!</h1>
+    <!-- Centered Upcoming Events title -->
+    <h2 class="upcoming-title mb-4">🎉 Upcoming Events</h2>
 
-Welcome to your new EventEaseApp!
+    <div class="event-list">
+        @foreach (var ev in EventService.GetEvents())
+        {
+            <div class="event-card">
+                <h3><i class="bi bi-calendar-event"></i> @ev.Name</h3>
+                <p class="text-muted">
+                    📅 @ev.Date.ToString("MMMM dd, yyyy") <br />
+                    📍 @ev.Location
+                </p>
+                <p>@ev.Description</p>
+                <NavLink class="btn rounded-pill shadow-sm"
+                         href="@($"/registerevent/{ev.Name}")">
+                    Register
+                </NavLink>
+                <NavLink class="btn btn-secondary rounded-pill shadow-sm ms-2"
+                         href="@($"/eventdetails/{ev.Name}")">
+                    Learn More
+                </NavLink>
+            </div>
+        }
+    </div>
+</div>

@@ -1,16 +1,42 @@
 ﻿@inherits LayoutComponentBase
+@using EventEaseApp.Services 
+@inject SessionService SessionService
+
 <div class="page">
-    <div class="sidebar">
+    <!-- Sidebar -->
+    <div class="sidebar @(isSidebarOpen ? "open" : "")">
         <NavMenu />
     </div>
 
     <main>
+        <!-- Top row with app title and hamburger -->
         <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <h1 class="app-title">EventEaseApp</h1>
+
+            <!-- Hamburger toggle (only visible on mobile) -->
+            <button class="hamburger" @onclick="ToggleSidebar">☰</button>
+
+            @if (!string.IsNullOrEmpty(SessionService.CurrentUserName))
+            {
+                <span class="welcome-message ms-3">
+                    Welcome, @SessionService.CurrentUserName!
+                </span>
+            }
         </div>
 
         <article class="content px-4">
             @Body
         </article>
     </main>
+    <!-- <Footer /> -->
 </div>
+
+
+@code {
+    private bool isSidebarOpen = false;
+
+    private void ToggleSidebar()
+    {
+        isSidebarOpen = !isSidebarOpen;
+    }
+}

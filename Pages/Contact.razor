@@ -1,0 +1,66 @@
+@page "/contact"
+@using System.ComponentModel.DataAnnotations
+@using EventEaseApp.Services
+@inject SessionService SessionService
+
+
+<div class="container text-center">
+    <h2 class="mb-4">📬 Contact Us</h2>
+
+    <EditForm Model="contact" OnValidSubmit="HandleSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Name</label>
+            <InputText class="form-control" @bind-Value="contact.Name" />
+            <ValidationMessage For="@(() => contact.Name)" />
+        </div>
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Email</label>
+            <InputText class="form-control" @bind-Value="contact.Email" />
+            <ValidationMessage For="@(() => contact.Email)" />
+        </div>
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Message</label>
+            <InputTextArea class="form-control" @bind-Value="contact.Message" rows="4" />
+            <ValidationMessage For="@(() => contact.Message)" />
+        </div>
+
+        <button type="submit" class="btn btn-success rounded-pill shadow-sm">
+            Submit
+        </button>
+    </EditForm>
+
+    @if (successMessage != null)
+    {
+        <div class="alert alert-success mt-3">@successMessage</div>
+    }
+</div>
+
+@code {
+    private ContactForm contact = new();
+    private string? successMessage;
+
+    private void HandleSubmit()
+    {
+        // For now, just show a success message
+        successMessage = "✅ Your message has been sent!";
+        contact = new(); // reset form
+    }
+
+    public class ContactForm
+    {
+        [Required(ErrorMessage = "Name is required")]
+        public string? Name { get; set; }
+
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Invalid email format")]
+        public string? Email { get; set; }
+
+        [Required(ErrorMessage = "Message is required")]
+        public string? Message { get; set; }
+    }
+}
