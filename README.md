@@ -1,28 +1,20 @@
-# EventEaseApp
+# EventEase App
 
-# EventEaseApp 🎉
+EventEase is a Blazor-based event registration and management app designed for clarity, accessibility, and maintainability.
 
-EventEaseApp is a Blazor WebAssembly application designed to simplify event registration and management.  
-It provides a clean, accessible interface for users to register for events, validate their information, and view grouped registrations.
+## 🛠️ Latest Updates (Nov 18, 2025)
 
----
+- ✅ Refactored event card layout with snow background, centered content, and responsive grid
+- ✅ Removed broken modal logic and "Details" buttons for cleaner UX
+- ✅ Added calendar icon to "Explore Upcoming Events!" section header
+- ✅ Resolved build errors:
+  - `CS0246`: Corrected model reference from `EventModel` to `Event`
+  - `CS0120`: Injected `EventService` properly in `Home.razor`
+- ✅ Updated `app.css` for:
+  - Lighter borders
+  - Hover lift effect on cards
+  - Centered buttons and titles
+  - Improved spacing and readability
 
-## 🚀 Features
-- **Event Cards**: Browse events with details and quick registration buttons.
-- **Registration Forms**: Central dropdown registration and event-specific registration pages.
-- **Validation**: Robust field-level validation with clear error messages.
-- **Grouped Registrations**: View all registrations organized by event name.
-- **Scalable Design**: Optimized to handle large datasets (50+ events).
 
----
 
-## 🛠️ Tech Stack
-- **Blazor WebAssembly (.NET 9)**  
-- **C# Models & Services**  
-- **Razor Components**  
-- **CSS Isolation & Global Styling**  
-- **GitHub for version control**
-
----
-
-## 📂 Project Structure
