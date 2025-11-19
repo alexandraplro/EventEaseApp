@@ -40,14 +40,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udGFjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/Pages/EventDetails.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXZlbnREZXRhaWxzLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,10 +54,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/Pages/Registrations.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0cmF0aW9ucy5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Volumes/ESCAPR/EventEaseWorkspace/EventEaseApp/Shared/Footer.razor]

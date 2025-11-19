@@ -2,35 +2,47 @@
 @using EventEaseApp.Models
 @using EventEaseApp.Services
 @inject RegistrationService RegistrationService
-@inject SessionService SessionService
 
+<section class="ee-section">
+    <h2 class="ee-section-title"><i class="bi bi-list-check"></i> Your Registrations</h2>
 
-<div class="container text-center">
-    <h2 class="mb-4">📋 All Registrations</h2>
-
-    @if (!RegistrationService.Registrations.Any())
+    @if (RegistrationService.GetRegistrations().Any())
     {
-        <div class="alert alert-info">No registrations yet.</div>
+        <table class="table table-dark table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Event</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var reg in RegistrationService.GetRegistrations())
+                {
+                    <tr>
+                        <td>@reg.Name</td>
+                        <td>@reg.Email</td>
+                        <td>@reg.EventName</td>
+                        <td>
+                            <button class="btn ee-btn-muted btn-sm" @onclick="() => CancelRegistration(reg)">
+                                <i class="bi bi-x-circle"></i> Cancel
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     }
     else
     {
-        @foreach (var group in RegistrationService.Registrations.GroupBy(r => r.EventName))
-        {
-            <div class="card mb-4 shadow-sm">
-                <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0">@group.Key</h5>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        @foreach (var reg in group)
-                        {
-                            <li class="list-group-item">
-                                <strong>@reg.Name</strong> <span class="text-muted">(@reg.Email)</span>
-                            </li>
-                        }
-                    </ul>
-                </div>
-            </div>
-        }
+        <p class="text-muted mt-3">No registrations yet. Head to the Register page to sign up!</p>
     }
-</div>
+</section>
+
+@code {
+    private void CancelRegistration(Registration reg)
+    {
+        RegistrationService.RemoveRegistration(reg);
+    }
+}

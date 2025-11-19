@@ -1,16 +1,3 @@
-@using EventEaseApp.Services
-@inject SessionService SessionService
-
-
-<footer class="footer text-center mt-4 py-3">
-    <p class="text-muted">
-        @if (!string.IsNullOrWhiteSpace(SessionService?.CurrentUserName))
-        {
-            <span>Logged in as <strong>@SessionService.CurrentUserName</strong></span>
-        }
-        else
-        {
-            <span>Welcome to EventEaseApp</span>
-        }
-    </p>
+<footer class="ee-footer">
+    <small>&copy; EventEase App 2025</small>
 </footer>

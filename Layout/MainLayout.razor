@@ -1,42 +1,31 @@
 ﻿@inherits LayoutComponentBase
-@using EventEaseApp.Services 
-@inject SessionService SessionService
 
-<div class="page">
-    <!-- Sidebar -->
-    <div class="sidebar @(isSidebarOpen ? "open" : "")">
+<div class="ee-layout">
+    <aside class=@($"ee-sidebar {(isMenuOpen ? "" : "collapsed")}")>
+        <button class="ee-hamburger" @onclick="ToggleMenu">
+            <i class="bi bi-list"></i>
+        </button>
         <NavMenu />
-    </div>
+    </aside>
 
-    <main>
-        <!-- Top row with app title and hamburger -->
-        <div class="top-row px-4">
-            <h1 class="app-title">EventEaseApp</h1>
+    <div class="ee-main">
+        <header class="ee-header text-center">
+            <h1 class="ee-title">EventEase App</h1>
+        </header>
 
-            <!-- Hamburger toggle (only visible on mobile) -->
-            <button class="hamburger" @onclick="ToggleSidebar">☰</button>
-
-            @if (!string.IsNullOrEmpty(SessionService.CurrentUserName))
-            {
-                <span class="welcome-message ms-3">
-                    Welcome, @SessionService.CurrentUserName!
-                </span>
-            }
-        </div>
-
-        <article class="content px-4">
+        <main class="container py-4">
             @Body
-        </article>
-    </main>
-    <!-- <Footer /> -->
+        </main>
+
+        <Footer />
+    </div>
 </div>
 
-
 @code {
-    private bool isSidebarOpen = false;
+    private bool isMenuOpen = true;
 
-    private void ToggleSidebar()
+    private void ToggleMenu()
     {
-        isSidebarOpen = !isSidebarOpen;
+        isMenuOpen = !isMenuOpen;
     }
 }

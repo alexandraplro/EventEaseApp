@@ -1,40 +1,30 @@
 @page "/attendance"
 @using EventEaseApp.Models
-@using EventEaseApp.Services
-@inject RegistrationService RegistrationService
 
-<div class="container text-center">
-    <h2 class="mb-4">📋 Attendance Tracker</h2>
+<section class="ee-section">
+    <h2 class="ee-section-title text-center">
+        <i class="bi bi-people"></i> Attendance Tracker
+    </h2>
 
-    @if (!RegistrationService.Registrations.Any())
-    {
-        <div class="alert alert-info">No registrations yet.</div>
-    }
-    else
-    {
-        @foreach (var group in RegistrationService.Registrations.GroupBy(r => r.EventName))
-        {
-            <div class="card mb-4 shadow-sm">
-                <div class="card-header bg-success text-white">
-                    <h5 class="mb-0">@group.Key</h5>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        @foreach (var reg in group)
-                        {
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                <div>
-                                    <strong>@reg.Name</strong> <span class="text-muted">(@reg.Email)</span>
-                                </div>
-                                <div>
-                                    <input type="checkbox" @bind="reg.Attended" class="form-check-input me-2" />
-                                    <label class="form-check-label">Attended</label>
-                                </div>
-                            </li>
-                        }
-                    </ul>
-                </div>
-            </div>
-        }
-    }
-</div>
+    <table class="table table-dark table-striped mt-3">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Event</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Claudia Plazas</td>
+                <td>Tech & Trust Expo</td>
+                <td>✔ Attended</td>
+            </tr>
+            <tr>
+                <td>Jordan Reyes</td>
+                <td>Impact & Insight Forum</td>
+                <td>✖ Absent</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

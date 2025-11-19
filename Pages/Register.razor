@@ -1,30 +1,27 @@
 @page "/register"
 @using EventEaseApp.Models
 @using EventEaseApp.Services
-@inject RegistrationService RegistrationService
 @inject EventService EventService
-@inject SessionService SessionService
+@inject RegistrationService RegistrationService
 
-<div class="container text-center">
-    <h2 class="mb-4">📝 Register for an Event</h2>
+<section class="ee-section">
+    <h2 class="ee-section-title"><i class="bi bi-clipboard-check"></i> Register for an event</h2>
 
     <EditForm Model="registration" OnValidSubmit="HandleValidSubmit">
         <DataAnnotationsValidator />
         <ValidationSummary />
 
-        <div class="mb-3 text-start">
+        <div class="mb-3">
             <label class="form-label">Name</label>
             <InputText class="form-control" @bind-Value="registration.Name" />
-            <ValidationMessage For="@(() => registration.Name)" />
         </div>
 
-        <div class="mb-3 text-start">
+        <div class="mb-3">
             <label class="form-label">Email</label>
             <InputText class="form-control" @bind-Value="registration.Email" />
-            <ValidationMessage For="@(() => registration.Email)" />
         </div>
 
-        <div class="mb-3 text-start">
+        <div class="mb-3">
             <label class="form-label">Event</label>
             <InputSelect class="form-control" @bind-Value="registration.EventName">
                 <option value="">-- Select Event --</option>
@@ -33,19 +30,18 @@
                     <option value="@ev.Name">@ev.Name</option>
                 }
             </InputSelect>
-            <ValidationMessage For="@(() => registration.EventName)" />
         </div>
 
-        <button type="submit" class="btn btn-success rounded-pill shadow-sm">
-            Register
+        <button type="submit" class="btn ee-btn-primary">
+            <i class="bi bi-check2-circle"></i> Submit registration
         </button>
     </EditForm>
 
-    @if (successMessage != null)
+    @if (!string.IsNullOrEmpty(successMessage))
     {
         <div class="alert alert-success mt-3">@successMessage</div>
     }
-</div>
+</section>
 
 @code {
     private Registration registration = new();
@@ -54,13 +50,7 @@
     private void HandleValidSubmit()
     {
         RegistrationService.AddRegistration(registration);
-
-        // Store session info
-        SessionService.CurrentUserName = registration.Name;
-        SessionService.CurrentUserEmail = registration.Email;
-        SessionService.UserRegistrations.Add(registration);
-
-        successMessage = $"✅ {registration.Name} registered for {registration.EventName}!";
-        registration = new Registration(); // reset form
+        successMessage = $"Registered {registration.Name} for {registration.EventName}.";
+        registration = new Registration();
     }
 }

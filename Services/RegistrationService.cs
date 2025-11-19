@@ -1,25 +1,25 @@
 using EventEaseApp.Models;
-using System.Collections.Generic;
 
 namespace EventEaseApp.Services
 {
     public class RegistrationService
     {
-        private readonly List<Registration> registrations = new();
+        private readonly List<Registration> _registrations = new();
 
-        // Expose registrations as read-only to prevent accidental modification outside the service
-        public IReadOnlyList<Registration> Registrations => registrations;
+        public IEnumerable<Registration> GetRegistrations() => _registrations;
 
-        // Add a new registration
-        public void AddRegistration(Registration reg)
+        public void AddRegistration(Registration registration)
         {
-            registrations.Add(reg);
+            if (string.IsNullOrWhiteSpace(registration.Name)) return;
+            if (string.IsNullOrWhiteSpace(registration.Email)) return;
+            if (string.IsNullOrWhiteSpace(registration.EventName)) return;
+
+            _registrations.Add(registration);
         }
-
-        // Optional: clear all registrations (useful for testing or reset)
-        public void ClearRegistrations()
+        public void RemoveRegistration(Registration registration)
         {
-            registrations.Clear();
+            _registrations.Remove(registration);
         }
     }
 }
+
