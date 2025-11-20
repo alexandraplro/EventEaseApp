@@ -12,9 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="404.html" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="404.html" CopyToPublishDirectory="Always" />
   </ItemGroup>
 
 </Project>
+
 
 
