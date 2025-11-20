@@ -154,7 +154,7 @@ main.container {
 .btn.ee-btn-primary,
 .btn.ee-btn-secondary,
 .btn.ee-btn-muted {
-  background: rebeccapurple;
+  background: #111827;
   color: aliceblue;
   border: none;
   border-radius: .6rem;
@@ -224,32 +224,4 @@ main.container {
     flex: 1;
     margin-left: 0;
   }
-}
-
-/* Attendance table */
-.attendance-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-.attendance-table thead tr {
-  background-color: steelblue;
-  color: lavenderblush;
-}
-
-.attendance-table th,
-.attendance-table td {
-  padding: 0.75rem 1rem;
-  text-align: left;
-}
-
-.attendance-table tbody tr:nth-child(odd) {
-  background-color: seashell;
-  color: darkslategray;
-}
-
-.attendance-table tbody tr:nth-child(even) {
-  background-color: whitesmoke;
-  color: darkslategray;
 }
