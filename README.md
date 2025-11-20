@@ -16,5 +16,11 @@ EventEase is a Blazor-based event registration and management app designed for c
   - Centered buttons and titles
   - Improved spacing and readability
 
+## 👩‍💻 Contributor
+
+**Alexandra PR**  
+Strategic communications leader turned full-stack developer.  
+Architect of clarity, accessibility, and resilient code.  
+Currently building Blazor/.NET apps with precision and purpose.
 
 
