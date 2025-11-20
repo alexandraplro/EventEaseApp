@@ -1,0 +1,31 @@
+﻿@inherits LayoutComponentBase
+
+<div class="ee-layout">
+    <aside class=@($"ee-sidebar {(isMenuOpen ? "" : "collapsed")}")>
+        <button class="ee-hamburger" @onclick="ToggleMenu">
+            <i class="bi bi-list"></i>
+        </button>
+        <NavMenu />
+    </aside>
+
+    <div class="ee-main">
+        <header class="ee-header text-center">
+            <h1 class="ee-title">EventEase App</h1>
+        </header>
+
+        <main class="container py-4">
+            @Body
+        </main>
+
+        <Footer />
+    </div>
+</div>
+
+@code {
+    private bool isMenuOpen = true;
+
+    private void ToggleMenu()
+    {
+        isMenuOpen = !isMenuOpen;
+    }
+}
