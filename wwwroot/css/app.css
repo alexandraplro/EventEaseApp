@@ -154,7 +154,7 @@ main.container {
 .btn.ee-btn-primary,
 .btn.ee-btn-secondary,
 .btn.ee-btn-muted {
-  background: #111827;
+  background: rebeccapurple;
   color: aliceblue;
   border: none;
   border-radius: .6rem;
@@ -234,7 +234,7 @@ main.container {
 }
 
 .attendance-table thead tr {
-  background-color: darkblue;
+  background-color: steelblue;
   color: lavenderblush;
 }
 
@@ -245,11 +245,11 @@ main.container {
 }
 
 .attendance-table tbody tr:nth-child(odd) {
-  background-color: lavender;
+  background-color: seashell;
   color: darkslategray;
 }
 
 .attendance-table tbody tr:nth-child(even) {
-  background-color: lightcyan;
+  background-color: whitesmoke;
   color: darkslategray;
 }
