@@ -1,0 +1,17 @@
+# Build artifacts
+bin/
+obj/
+publish/
+
+# User-specific files
+*.log
+*.cache
+*.pdb
+
+# VS/IDE files
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
