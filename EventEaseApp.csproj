@@ -11,4 +11,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.10" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="404.html" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>
+
+
