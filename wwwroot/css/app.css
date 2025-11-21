@@ -246,8 +246,14 @@ main.container {
   background-color: rebeccapurple;
   color: lavenderblush;
   transform: translateY(-4px);
-  tr:hover {background-color: midnightblue;}; 
 }
+
+/* Hover effect for header rows */
+.attendance-table thead tr:hover {
+  background-color: midnightblue;
+  color: white; /* optional for contrast */
+}
+
 
 .attendance-table th,
 .attendance-table td {
@@ -255,16 +261,70 @@ main.container {
   text-align: left;
 }
 
+/* Odd rows */
 .attendance-table tbody tr:nth-child(odd) {
   background-color: snow;
   color: darkslategray;
   transform: translateY(-4px);
-  tr:hover {background-color: lightgray;};
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover effect for odd rows */
+.attendance-table tbody tr:nth-child(odd):hover {
+  background-color: lightgray;
+  transform: translateY(-2px); /* subtle lift on hover */
+}
+
+/* Even rows */
 .attendance-table tbody tr:nth-child(even) {
   background-color: seashell;
   color: darkslategray;
   transform: translateY(-4px);
-  tr:hover {background-color: lightgray;};
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for even rows */
+.attendance-table tbody tr:nth-child(even):hover {
+  background-color: lightgray;
+  transform: translateY(-2px);
+}
+
+/* Header row */
+.registration-table thead tr {
+  background-color: rebeccapurple;
+  color: lavenderblush;
+  transform: translateY(-4px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.registration-table thead tr:hover {
+  background-color: midnightblue;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Odd rows */
+.registration-table tbody tr:nth-child(odd) {
+  background-color: snow;
+  color: darkslategray;
+  transform: translateY(-4px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.registration-table tbody tr:nth-child(odd):hover {
+  background-color: lightgray;
+  transform: translateY(-2px);
+}
+
+/* Even rows */
+.registration-table tbody tr:nth-child(even) {
+  background-color: seashell;
+  color: darkslategray;
+  transform: translateY(-4px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.registration-table tbody tr:nth-child(even):hover {
+  background-color: lightgray;
+  transform: translateY(-2px);
 }
