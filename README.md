@@ -1,7 +1,9 @@
-*EventEaseApp* 🎉
+**EventEaseApp** 🎉
+
 A Blazor WebAssembly application for managing event registrations and attendance with a clean, responsive UI. EventEaseApp demonstrates modern .NET development practices, component reuse, and accessible design — perfect for organizers and participants alike.
 
-🚀 Features
+**🚀 Features**
+
 Event registration: Users can sign up for events with name and email.
 
 Attendance tracking: View who’s registered and manage cancellations.
@@ -14,7 +16,8 @@ Reusable components: Built with Blazor’s component model for maintainability.
 
 Accessible design: Semantic markup, clear contrast, and keyboard-friendly inputs.
 
-🛠️ Tech Stack
+**🛠️ Tech Stack**
+
 Blazor WebAssembly — client-side .NET app framework
 
 .NET 8 — modern runtime and tooling
@@ -25,7 +28,8 @@ Custom CSS — branded look with transitions and hover effects
 
 GitHub Actions — automated deployment to GitHub Pages (optional)
 
-📂 Project Structure
+**📂 Project Structure**
+
 Code
 EventEaseApp/
 │── Pages/
@@ -45,16 +49,18 @@ EventEaseApp/
 Prerequisites
 Install .NET SDK
 
-Install Visual Studio Code or Visual Studio
+*Install Visual Studio Code or Visual Studio*
 
-Run locally
+**Run locally**
+
 bash
 git clone https://github.com/rtcn2/eventeaseapp.git
 cd eventeaseapp
 dotnet run
 Open https://localhost:5001 in your browser.
 
-🌐 Deployment
+**🌐 Deployment**
+
 EventEaseApp can be deployed to GitHub Pages or Azure Static Web Apps.
 
 For GitHub Pages:
@@ -65,5 +71,7 @@ Push publish/wwwroot to the gh-pages branch
 
 Enable Pages in repo settings
 
-👩‍💻 Author
+**👩‍💻 Author**
+
 Built by AlexandraPlRo — strategic communicator turned developer, blending investigative rigor with modern .NET craftsmanship.
+
