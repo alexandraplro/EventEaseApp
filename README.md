@@ -33,19 +33,20 @@ GitHub Actions — automated deployment to GitHub Pages (optional)
 Code
 
 EventEaseApp/
-│── Pages/
+├── Pages/
 │   ├── Index.razor
 │   ├── Register.razor
-│   ├── Registrations.razor
-│── Components/
+│   └── Registrations.razor
+├── Components/
 │   ├── NavMenu.razor
-│   ├── AttendanceTable.razor
-│── Services/
-│   ├── RegistrationService.cs
-│── wwwroot/
-│   ├── css/app.css
-│   ├── index.html
-│── README.md
+│   └── AttendanceTable.razor
+├── Services/
+│   └── RegistrationService.cs
+├── wwwroot/
+│   ├── css/
+│   │   └── app.css
+│   └── index.html
+└── README.md
 
 **⚙️ Getting Started**
 
