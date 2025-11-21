@@ -78,7 +78,7 @@ main.container {
 }
 
 .ee-section-subtitle {
-    color: darkslateblue;
+    color: steelblue;
     font-weight: 400;
     letter-spacing: 1px;
     margin: 2rem 0 1.5rem;
@@ -241,7 +241,7 @@ main.container {
 }
 
 .attendance-table thead tr {
-  background-color: indigo;
+  background-color: rebeccapurple;
   color: lavenderblush;
 }
 
@@ -252,7 +252,7 @@ main.container {
 }
 
 .attendance-table tbody tr:nth-child(odd) {
-  background-color: rgb(136, 136, 174);
+  background-color: snow;
   color: darkslategray;
 }
 
