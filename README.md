@@ -31,6 +31,7 @@ GitHub Actions — automated deployment to GitHub Pages (optional)
 **📂 Project Structure**
 
 Code
+
 EventEaseApp/
 │── Pages/
 │   ├── Index.razor
@@ -45,13 +46,16 @@ EventEaseApp/
 │   ├── css/app.css
 │   ├── index.html
 │── README.md
-⚙️ Getting Started
+
+**⚙️ Getting Started**
+
 Prerequisites
+
 Install .NET SDK
 
-*Install Visual Studio Code or Visual Studio*
+Install Visual Studio Code or Visual Studio
 
-**Run locally**
+Run locally:
 
 bash
 git clone https://github.com/rtcn2/eventeaseapp.git
