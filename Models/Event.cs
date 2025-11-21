@@ -10,3 +10,5 @@ namespace EventEaseApp.Models
         public string Description { get; set; } = string.Empty;
     }
 }
+
+

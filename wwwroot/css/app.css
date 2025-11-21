@@ -78,10 +78,10 @@ main.container {
 }
 
 .ee-section-subtitle {
-    color: navy;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin: 2rem 0 1.5rem;
+  color: navy;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 2rem 0 1.5rem;
 }
 
 /* Nav links */
@@ -245,7 +245,8 @@ main.container {
 .attendance-table thead tr {
   background-color: rebeccapurple;
   color: lavenderblush;
-  tr:hover {background-color: darkblue; color: ghostwhite};
+  transform: translateY(-4px);
+  tr:hover {background-color: midnightblue;}; 
 }
 
 .attendance-table th,
@@ -257,11 +258,13 @@ main.container {
 .attendance-table tbody tr:nth-child(odd) {
   background-color: snow;
   color: darkslategray;
-  tr:hover {background-color: whitesmoke; color: midnightblue};
+  transform: translateY(-4px);
+  tr:hover {background-color: lightgray;};
 }
 
 .attendance-table tbody tr:nth-child(even) {
   background-color: seashell;
   color: darkslategray;
-  tr:hover {background-color: ivory; color: midnightblue};
+  transform: translateY(-4px);
+  tr:hover {background-color: lightgray;};
 }
