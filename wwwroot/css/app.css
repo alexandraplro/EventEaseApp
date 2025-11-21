@@ -78,7 +78,7 @@ main.container {
 }
 
 .ee-section-subtitle {
-    color: steelblue;
+    color: navy;
     font-weight: 400;
     letter-spacing: 1px;
     margin: 2rem 0 1.5rem;
@@ -238,11 +238,15 @@ main.container {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
+  tr:hover {background-color: mintcream;};
+  border: 1px solid var(--border);
+  border-style: var(--muted);
 }
 
 .attendance-table thead tr {
   background-color: rebeccapurple;
   color: lavenderblush;
+  tr:hover {background-color: darkblue;}
 }
 
 .attendance-table th,
