@@ -1,4 +1,4 @@
-EventEaseApp 🎉
+*EventEaseApp* 🎉
 A Blazor WebAssembly application for managing event registrations and attendance with a clean, responsive UI. EventEaseApp demonstrates modern .NET development practices, component reuse, and accessible design — perfect for organizers and participants alike.
 
 🚀 Features
